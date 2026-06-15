@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BrewNest — Where Every Sip Feels Like Home</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="logo" href="#home">Brew<span>Nest</span></a>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#events">Events</a></li>
+    <li><a href="#reservation">Reservation</a></li>
+  </ul>
+  <button class="cart-btn" onclick="toggleCart()">
+    🛒 Your Order
+    <span class="cart-count" id="cartCount">0</span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-left">
+    <div class="hero-eyebrow fade-up">Premium Café Experience</div>
+    <h1 class="hero-title fade-up fade-up-1">
+      A Place Where<br>Even Time<br>
+      <span class="typing-wrap" id="typingText"></span>
+    </h1>
+    <p class="hero-desc fade-up fade-up-2">
+      Step into BrewNest — a sanctuary for coffee lovers, late-night thinkers, and unforgettable conversations. 
+      Sip, unwind, work and relax in a space that feels like your second home.
+    </p>
+    <div class="hero-btns fade-up fade-up-3">
+      <a class="btn-primary" href="#menu">Explore Menu</a>
+      <a class="btn-outline" href="#reservation">Book a Table</a>
+    </div>
+  </div>
+  <div class="hero-right fade-up fade-up-2">
+    <div class="featured-label">☕ Featured Moments</div>
+    <div style="font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;align-self:flex-start;margin-bottom:6px;">Crafted Experiences ☕</div>
+    <div class="hero-cards">
+      <div class="hero-card">
+        <div class="hero-card-img"><span>☕</span></div>
+        <div class="hero-card-overlay">Signature Brew</div>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-img"><span>🍕</span></div>
+        <div class="hero-card-overlay">Artisan Food</div>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-img"><span>🎵</span></div>
+        <div class="hero-card-overlay">Live Vibes</div>
+      </div>
+    </div>
+    <div class="hero-quote">"Good coffee. Good vibes. Great memories. ❤️"</div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stat-item">
+    <div class="stat-icon">👥</div>
+    <div>
+      <div class="stat-number">12K+</div>
+      <div class="stat-label">Happy Visitors</div>
+    </div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-icon">☕</div>
+    <div>
+      <div class="stat-number">60+</div>
+      <div class="stat-label">Brew Variants</div>
+    </div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-icon">🌙</div>
+    <div>
+      <div class="stat-number">Open Till</div>
+      <div class="stat-label stat-number" style="color:var(--gold-light);font-family:'Playfair Display',serif;font-size:1rem;">Midnight 🌙</div>
+    </div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-icon">📍</div>
+    <div>
+      <div class="stat-number">1 Cozy</div>
+      <div class="stat-label">Destination</div>
+    </div>
+  </div>
+</div>
+
+<!-- MENU -->
+<section id="menu">
+  <div class="menu-header">
+    <div>
+      <div class="section-tag">☕ Crafted With Passion</div>
+      <h2 class="section-title">Our Signature<br><span class="accent">Menu</span></h2>
+    </div>
+    <p class="menu-desc">Every dish and drink is prepared with love and the finest ingredients to give you an unforgettable experience.</p>
+  </div>
+
+  <div class="category-tabs" id="categoryTabs"></div>
+  <div class="menu-grid" id="menuGrid"></div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-imgs">
+    <div class="about-img">☕</div>
+    <div class="about-img">📖</div>
+    <div class="about-img">🕯️</div>
+    <div class="about-img">🎶</div>
+  </div>
+  <div>
+    <div class="section-tag">✨ More Than Just a Café</div>
+    <h2 class="section-title">A Cozy Corner<br><span class="accent">Built for You</span></h2>
+    <div class="about-quote">
+      "We don't just serve coffee — we create moments worth savoring."
+    </div>
+    <p style="color:var(--text-dim);font-family:'Cormorant Garamond',serif;font-size:1.05rem;line-height:1.7;">
+      BrewNest was crafted for dreamers, coffee lovers, late-night thinkers, and unforgettable conversations. 
+      It's a cozy corner where great coffee meets good vibes and every moment feels like home.
+    </p>
+    <div class="features-row" style="margin-top:24px;">
+      <div class="feature-item">
+        <div class="feature-icon">☕</div>
+        <div>
+          <div class="feature-name">HandCrafted Coffee</div>
+          <div class="feature-desc">Expertly brewed with premium beans for perfect flavour.</div>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🌿</div>
+        <div>
+          <div class="feature-name">Peaceful Ambience</div>
+          <div class="feature-desc">Warm lights, cozy seating and a calm atmosphere.</div>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🎵</div>
+        <div>
+          <div class="feature-name">Live Music</div>
+          <div class="feature-desc">Soulful live performances every weekend evening.</div>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🛋️</div>
+        <div>
+          <div class="feature-name">Cozy Interior</div>
+          <div class="feature-desc">Beautifully designed spaces that feel like a second home.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTS -->
+<section id="events">
+  <div class="events-header">
+    <div class="section-tag" style="justify-content:center;">🎵 Where Coffee Meets Conversations & Music</div>
+    <h2 class="section-title" style="text-align:center;">Our <span class="accent">Events</span></h2>
+    <p class="events-subtitle">From soulful music to creative experiences, we bring people together through unforgettable evenings.</p>
+  </div>
+  <div class="events-grid">
+    <div class="event-card">
+      <div class="event-card-img">🎸
+        <div class="event-icon-badge">🎸</div>
+      </div>
+      <div class="event-body">
+        <div class="event-name">Acoustic Nights</div>
+        <div class="event-time">Every Friday: 8:00 PM Onwards</div>
+        <div class="event-desc">Sit back, relax & vibe with the best acoustic performers in town.</div>
+        <button class="event-link">JOIN US →</button>
+      </div>
+    </div>
+    <div class="event-card">
+      <div class="event-card-img">🎤
+        <div class="event-icon-badge">🎤</div>
+      </div>
+      <div class="event-body">
+        <div class="event-name">Open Mic Night</div>
+        <div class="event-time">Every Saturday: 7:00 PM Onwards</div>
+        <div class="event-desc">A stage for your words, your voice and your stories. Everyone's welcome.</div>
+        <button class="event-link">JOIN US →</button>
+      </div>
+    </div>
+    <div class="event-card">
+      <div class="event-card-img">🕯️
+        <div class="event-icon-badge">❤️</div>
+      </div>
+      <div class="event-body">
+        <div class="event-name">Candlelight Dates</div>
+        <div class="event-time">Every Wednesday: 8:00 PM Onwards</div>
+        <div class="event-desc">Perfect evenings with beautiful vibes and your favourite coffee.</div>
+        <button class="event-link">JOIN US →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESERVATION -->
+<section id="reservation" style="padding:0;">
+  <div class="reservation-left">
+    <div style="font-size:4rem;position:relative;z-index:1;">🕯️</div>
+    <div class="reservation-left-text">
+      <h2>Every moment is better<br><span>with coffee.</span></h2>
+      <p>Book your table and enjoy a relaxing experience like never before.</p>
+    </div>
+  </div>
+  <div class="reservation-right">
+    <div class="form-title">📅 Book Your Table</div>
+    <p class="form-subtitle">We can't wait to welcome you!</p>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label><span>👤</span><input type="text" placeholder="Full Name"></label>
+      </div>
+      <div class="form-group">
+        <label><span>📞</span><input type="tel" placeholder="Phone Number"></label>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label><span>👥</span>
+          <select>
+            <option value="" disabled selected>Select guests</option>
+            <option>1 Guest</option><option>2 Guests</option><option>3 Guests</option>
+            <option>4 Guests</option><option>5+ Guests</option>
+          </select>
+        </label>
+      </div>
+      <div class="form-group">
+        <label><span>📅</span><input type="date"></label>
+      </div>
+    </div>
+    <div class="form-group">
+      <label><span>🕐</span><input type="time"></label>
+    </div>
+    <div class="form-group">
+      <label><span>💬</span><textarea placeholder="Any special request? (optional)"></textarea></label>
+    </div>
+    <button class="submit-btn" onclick="bookTable()">BOOK MY TABLE →</button>
+    <div class="form-trust">🔒 Your information is safe with us.</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo" style="cursor:default;">Brew<span style="color:var(--cream);font-style:italic;">Nest</span></div>
+      <p>A sanctuary for coffee lovers, late-night thinkers, and those who believe life is better with a great brew in hand.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#reservation">Reservation</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Hours</h4>
+      <ul>
+        <li><a>Mon–Thu: 10am–11pm</a></li>
+        <li><a>Fri–Sat: 10am–1am</a></li>
+        <li><a>Sunday: 11am–10pm</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a>📍 Indore, MP</a></li>
+        <li><a>📞 +91 98765 43210</a></li>
+        <li><a>✉️ hello@brewnest.in</a></li>
+        <li><a>📸 @brewnest.cafe</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 BrewNest. All rights reserved.</p>
+    <p style="color:var(--gold);font-family:'Cormorant Garamond',serif;font-style:italic;">"Good coffee. Good vibes. Great memories."</p>
+  </div>
+</footer>
+
+<!-- CART SIDEBAR -->
+<div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+<div class="cart-sidebar" id="cartSidebar">
+  <div class="cart-header">
+    <h3>🛒 Your Order <span id="cartHeaderCount" style="color:var(--gold);font-size:0.9rem;"></span></h3>
+    <button class="close-cart" onclick="toggleCart()">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-footer" id="cartFooter" style="display:none;">
+    <div class="cart-total">
+      <span>Total</span>
+      <span class="cart-total-amount" id="cartTotal">₹0</span>
+    </div>
+    <div class="order-btns">
+      <button class="order-btn dine" onclick="placeOrder('Dine In')">🍽️ Order</button>
+      <button class="order-btn parcel" onclick="placeOrder('Parcel')">📦 Parcel</button>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast">✅ Added to cart!</div>
+
+<!-- SUCCESS -->
+<div class="success-overlay" id="successOverlay">
+  <div class="success-box">
+    <span class="big-emoji" id="successEmoji">🎉</span>
+    <h2 id="successTitle">Order Placed!</h2>
+    <p id="successMsg">Your order has been received. We'll have it ready for you shortly!</p>
+    <button class="btn-primary" onclick="closeSuccess()">Back to Menu</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
