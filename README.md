@@ -8,7 +8,6 @@ Built with **HTML**, **CSS**, and **JavaScript**
 
 🌐 **Live Demo:** https://niharika-dhanotiya.github.io/brewnest-cafe-website/
 
-⭐ If you like this project, don't forget to star the repository!
 
 </div>
 
